@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css">
+    <title>BCR - Binar Car Rental</title>
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"></a>
+                <div class="item">
+                    <ul class="nav ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" id="our-services" href="#best-car-rental">Our Service</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" href="#why-us">Why Us</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" href="#testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-dark" href="#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <button type="button" class="btn btn-success fw-bold">Register</button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" style="width: 60%;" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header mt-3">
+                        <a class="nav-link fw-bold">BCR</a>
+                        <button type="button" class="btn-close justify-content-start me-5" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-2">
+                            <li class="nav-item text-dark">
+                                <a class="nav-link" href="#best-car-rental">Our Service</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a class="nav-link" href="#why-us">Why Us</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a class="nav-link" href="#testimonial">Testimony</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a class="nav-link" href="#faq">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-success fw-bold">Register</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="container home">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 sewa">
+                        <p>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</p>
+                        <p class="binar-car">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas <br>
+                            terbaik
+                            dengan harga terjangkau. Selalu siap melayani kebutuhanmu <br> untuk sewa mobil selama 24
+                            jam.</p>
+                        <p class="binar-lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img src="images/home/Mercedes Car EQC 300kW Edition - 900x598 1.png" alt="">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <form id="filter-form">
+            <div class="card w-80 filter">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="driver" class="mb-3">Tipe Driver</label>
+                            <select class="driver form-select fs-6" id="available" aria-label="Default select example"
+                                name="available">
+                                <option value="true">Dengan Sopir</option>
+                                <option value="false">Tanpa Sopir (Lepas Kunci)</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <label for="tanggal" class="mb-3 d-block">Tanggal</label>
+                            <input type="date" class="form-control" name="date" id="date">
+                        </div>
+                        <div class="col-2">
+                            <label for="waktu" class="mb-3 d-block">Waktu Jemput/Ambil</label>
+                            <select class="form-select" name="time" id="time">
+                                <option value="">08.00 </option>
+                                <option value="">09.00 </option>
+                                <option value="">10.00 </option>
+                                <option value="">11.00 </option>
+                                <option value="">12.00 </option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="penumpang" class="mb-3 d-block">Jumlah Penumpang (optional)</label>
+                            <div class="icon-form d-flex">
+                                <input type="text" class="form-control" name="penumpang" id="penumpang"
+                                    placeholder="Jumlah penumpang">
+                                <i class='bi bi-people-fill fs-5'></i>
+                            </div>
+                        </div>
+                        <div class="col-2 cari">
+                            <button class="btn btn-success" id="cari" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div id="result"></div>
+
+        <footer>
+            <div class="container footer">
+                <div class="row mb-5">
+                    <div class="col-md-3 col-sm-12">
+                        <ul>
+                            <li class="list-group-item mb-3">Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</li>
+                            <li class="list-group-item mb-3">binarcarrental@gmail.com</li>
+                            <li class="list-group-item">081-233-334-808</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <ul>
+                            <li class="list-group-item mb-3">
+                                <p><a href="#best-car-rental" class="nav-link">Our services</a></p>
+                            </li>
+                            <li class="list-group-item mb-3">
+                                <p><a href="#why-us" class="nav-link">Why Us</a></p>
+                            </li>
+                            <li class="list-group-item mb-3">
+                                <p><a href="#testimonial" class="nav-link">Testimonial</a></p>
+                            </li>
+                            <li class="list-group-item mb-3">
+                                <p><a href="#faq" class="nav-link">FAQ</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <ul>
+                            <li class="list-group-item mb-3">Connect with us</li>
+                            <li class="list-group-item mb-3"><img src="images/home/list item.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 Copyright">
+                        <ul>
+                            <li class="list-group-item mb-3">Copyright Binar 2022</li>
+                            <li class="list-group-item mb-3 footer-brand"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const filterForm = document.getElementById('filter-form');
+        const result = document.getElementById('result');
+
+        filterForm.addEventListener('submit', async e => {
+            e.preventDefault();
+            const formData = new FormData(filterForm);
+            const available = formData.get('available');
+            const date = formData.get('date');
+            const time = formData.get('time');
+            const penumpang = formData.get('penumpang');
+
+            const res = await fetch(
+                `/filterAvailable?available=${available}&&date=${date}&&time=${time}&&penumpang=${penumpang}`
+                );
+            const data = await res.text();
+
+            result.innerHTML = data;
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
